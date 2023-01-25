@@ -1,0 +1,72 @@
+<html>
+
+
+<body style="background-image:url('https://wallpaperaccess.com/full/2413551.jpg');background-repeat:no-repeat;background-size: cover;">
+    <div class="container">
+        <h1>Passenger counter</h1>
+
+        <h2 id="count-el">0</h2>
+
+        <button id="increment" onclick="increment()">INCREMENT</button>
+
+        <button id="save" onclick="save()">SAVE</button>
+
+        <p id="save1">Passenger Arrived:-
+        <p>
+    </div>
+    <style>
+        .container {
+            text-align: center;
+            border: 3px solid white;
+            padding: 200px;
+            margin: auto;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 50px
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 50px
+        }
+
+        p {
+            color: white;
+            text-align: center;
+            font-size: 40px
+        }
+
+        button {
+            text-align: center;
+            background-color: powderblue;
+            color: black;
+        }
+
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+    <script>
+        let count = 0
+
+        function increment() {
+            count += 1
+            document.getElementById("count-el").innerText = count
+        }
+
+        function save() {
+            let countStr = (count + " - ")
+            document.getElementById("save1").textContent += countStr
+            document.getElementById("count-el").innerText = 0
+            count = 0
+        }
+    </script>
+</body>
+
+</html>
